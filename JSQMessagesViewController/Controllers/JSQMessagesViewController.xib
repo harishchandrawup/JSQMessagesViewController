@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4864" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSQMessagesViewController">
             <connections>
-                <outlet property="collectionView" destination="l9u-2b-4LK" id="bLP-6g-CkO"/>
-                <outlet property="inputToolbar" destination="BoD-Az-3DM" id="w74-g9-1qA"/>
-                <outlet property="view" destination="mUa-cS-ru4" id="nki-T1-RTI"/>
+                <outlet property="collectionView" destination="wjT-wo-0kP" id="CQR-1S-Avz"/>
+                <outlet property="inputToolbar" destination="FyR-Me-vAD" id="dhX-9e-BjK"/>
+                <outlet property="view" destination="OzU-NY-bYh" id="WKF-xy-2jV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,7 +23,7 @@
             <subviews>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-2b-4LK" customClass="JSQMessagesCollectionView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
                     <collectionViewLayout key="collectionViewLayout" id="dZl-7C-LHR" customClass="JSQMessagesCollectionViewFlowLayout"/>
                     <cells/>
                 </collectionView>
@@ -31,19 +32,57 @@
                     <items/>
                 </toolbar>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="35f-yh-XMP"/>
+            <viewLayoutGuide key="safeArea" id="RWM-Gf-d8D"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="MmF-oh-Y75"/>
                 <constraint firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="O9u-TA-A0e"/>
-                <constraint firstItem="35f-yh-XMP" firstAttribute="bottom" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="Re7-WW-UmS"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="dCQ-DM-Wdj"/>
-                <constraint firstItem="35f-yh-XMP" firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="rHs-6q-NX4"/>
+                <constraint firstItem="l9u-2b-4LK" firstAttribute="bottom" secondItem="RWM-Gf-d8D" secondAttribute="bottom" id="eqH-ty-tt4"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
+                <constraint firstItem="BoD-Az-3DM" firstAttribute="bottom" secondItem="RWM-Gf-d8D" secondAttribute="bottom" id="xyB-ut-U1E"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="-10" y="20"/>
         </view>
+        <view contentMode="scaleToFill" id="OzU-NY-bYh">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wjT-wo-0kP" customClass="JSQMessagesCollectionView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <collectionViewLayout key="collectionViewLayout" id="HIo-b6-HMQ" customClass="JSQMessagesCollectionViewFlowLayout"/>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyR-Me-vAD" customClass="JSQMessagesInputToolbar">
+                    <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                    <items/>
+                </toolbar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="kFo-BI-cZX"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="kFo-BI-cZX" firstAttribute="bottom" secondItem="wjT-wo-0kP" secondAttribute="bottom" id="1SK-bk-jor"/>
+                <constraint firstItem="kFo-BI-cZX" firstAttribute="trailing" secondItem="wjT-wo-0kP" secondAttribute="trailing" id="5pv-qG-md8"/>
+                <constraint firstItem="wjT-wo-0kP" firstAttribute="leading" secondItem="kFo-BI-cZX" secondAttribute="leading" id="CfL-vS-2E4"/>
+                <constraint firstItem="kFo-BI-cZX" firstAttribute="bottom" secondItem="FyR-Me-vAD" secondAttribute="bottom" id="D1j-yd-S4k"/>
+                <constraint firstItem="FyR-Me-vAD" firstAttribute="trailing" secondItem="kFo-BI-cZX" secondAttribute="trailing" id="Qi2-Mb-OUc"/>
+                <constraint firstItem="FyR-Me-vAD" firstAttribute="leading" secondItem="kFo-BI-cZX" secondAttribute="leading" id="gGi-2O-pXh"/>
+                <constraint firstItem="wjT-wo-0kP" firstAttribute="top" secondItem="kFo-BI-cZX" secondAttribute="top" id="rPf-8Q-zXH"/>
+            </constraints>
+            <point key="canvasLocation" x="-941" y="-8"/>
+        </view>
     </objects>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
